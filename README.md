@@ -24,7 +24,8 @@ First, I had to navigate to Security Onion's website to find the documentation t
 
 Next, I went ahead and downloaded the ISO. 
 
-![image](https://github.com/user-attachments/assets/ce7cfe36-8b8a-4986-b8d1-2c368098a250)
+![image](https://github.com/user-attachments/assets/0daf027a-b9ed-400d-9989-c57482c8c680)
+
 
 
 
