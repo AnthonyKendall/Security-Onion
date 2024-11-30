@@ -5,8 +5,6 @@ Security Onion
 The objective of Security Onion is to provide a comprehensive, open-source Linux distribution for network security monitoring (NSM), intrusion detection, and log management. It integrates various security tools, such as Suricata, Zeek, and the Elastic Stack, to help organizations detect, analyze, and respond to cybersecurity threats. Security Onion aims to offer a unified platform for threat hunting, incident response, and security monitoring, making it easier for security teams to identify and mitigate potential risks in real-time.
 
 ### Skills Learned
-[Bullet Points - Remove this afterwards]
-
 - Network Traffic Analysis: Monitoring and analyzing network traffic using tools like Zeek and Suricata.
 - Intrusion Detection: Setting up and configuring intrusion detection systems (IDS) to identify security threats.
 - Log Management: Collecting, parsing, and managing logs for effective threat hunting and incident response.
