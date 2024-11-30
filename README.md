@@ -16,3 +16,16 @@ The objective of Security Onion is to provide a comprehensive, open-source Linux
 
 
 ## Steps Taken
+
+First, I had to navigate to Security Onion's website to find the documentation to get the ISO file. For this setup, I will be installing it as a standalone ISO. However, you could install it in Amazon Cloud, Azure, etc.. just refer to the documentation. 
+
+![Snag_e6e5227](https://github.com/user-attachments/assets/318e52e3-1e64-497a-b111-b3bb6eb07958)
+
+
+Next, I went ahead and downloaded the ISO. 
+
+![image](https://github.com/user-attachments/assets/ce7cfe36-8b8a-4986-b8d1-2c368098a250)
+
+
+
+
