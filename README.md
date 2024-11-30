@@ -59,6 +59,12 @@ From here, all we need to do is type the command to have the switch know which p
 Since mine is already configured, I will not replicate this command all the way, however, I will tell you the commands to type. Before you proceed, please note that this command is temporary. If youre switch reboots for updates or whatever, the command gets erased and you have to do this all over again to config the switch. Moving on, you also need to decide which session you want to configure. It does not matter if you pick any of them since typically these will be disabled and hidden to most who dont know how to get here. So for this example, well just stick with session 1. Also you have to pick which port you want to have TAP enabled on so make sure you have Security Onion TAP port connected to the right port. I will use port 42, however, you can use which ever port you want. So type in the CLI "monitor session 1 destination interface 0/42". This will have the UNIFI switch make that specific port the TAP port. Next, we need to target the source ports. Type in "monitor session 1 source interface 0/2" Again, this is just an example port. You would just need to replicate that command per port you want to monirot. Lastly, just type the command "monitor session 1 mode" to enable the session and that is it. Security onion will now start moniroting the ports specified. 
 
 
+Now that the switch has been configued, lets head back over to security onion. 
+
+It looks like I am getting alerts now from all of my internal network. 
+
+![image](https://github.com/user-attachments/assets/2faa949d-a1be-4896-9f60-9ff4ea842f51)
+
 
 
 Here is a view of my switch. I have all ports on the bottom row activated with my different network devices. Port 42 is the TAP port and the others are the source ports that I point to the TAP port. 
@@ -107,4 +113,6 @@ Here is a view of my switch. I have all ports on the bottom row activated with m
 
 References 
 
-https://www.youtube.com/watch?v=Jb_sb_vLrB0&list=PLljFlTO9rB17E0hOetV_R4Lc0WbEy8q_Y&index=2
+https://www.youtube.com/watch?v=Jb_sb_vLrB0&list=PLljFlTO9rB17E0hOetV_R4Lc0WbEy8q_Y&index=2 ------ Security Onion setup
+
+https://www.youtube.com/watch?v=VwVyM_wZTps ------ Unifi Switch config
