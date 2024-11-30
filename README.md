@@ -1,18 +1,20 @@
 # PROJECTNAME
+Security Onion
 
 ## Objective
-[Brief Objective - Remove this afterwards]
-
-The Detection Lab project aimed to establish a controlled environment for simulating and detecting cyber attacks. The primary focus was to ingest and analyze logs within a Security Information and Event Management (SIEM) system, generating test telemetry to mimic real-world attack scenarios. This hands-on experience was designed to deepen understanding of network security, attack patterns, and defensive strategies.
+The objective of Security Onion is to provide a comprehensive, open-source Linux distribution for network security monitoring (NSM), intrusion detection, and log management. It integrates various security tools, such as Suricata, Zeek, and the Elastic Stack, to help organizations detect, analyze, and respond to cybersecurity threats. Security Onion aims to offer a unified platform for threat hunting, incident response, and security monitoring, making it easier for security teams to identify and mitigate potential risks in real-time.
 
 ### Skills Learned
 [Bullet Points - Remove this afterwards]
 
-- Advanced understanding of SIEM concepts and practical application.
-- Proficiency in analyzing and interpreting network logs.
-- Ability to generate and recognize attack signatures and patterns.
-- Enhanced knowledge of network protocols and security vulnerabilities.
-- Development of critical thinking and problem-solving skills in cybersecurity.
+- Network Traffic Analysis: Monitoring and analyzing network traffic using tools like Zeek and Suricata.
+- Intrusion Detection: Setting up and configuring intrusion detection systems (IDS) to identify security threats.
+- Log Management: Collecting, parsing, and managing logs for effective threat hunting and incident response.
+- Security Incident Response: Investigating and responding to security incidents using Security Onion's dashboards and tools.
+- Data Correlation: Correlating data from multiple sources (network, host, and logs) for comprehensive threat analysis.
+- Threat Hunting: Using Elastic Stack for searching and identifying anomalies or malicious activity.
+- Alert Tuning: Customizing and fine-tuning alerts to reduce false positives and enhance detection accuracy.
+- Elastic Stack Management: Working with Elasticsearch, Kibana, and Logstash for data visualization and analysis.
 
 
 ## Steps Taken
