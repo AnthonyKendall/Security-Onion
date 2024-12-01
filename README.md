@@ -34,7 +34,7 @@ Here is the hash of the file path.
 ![image](https://github.com/user-attachments/assets/3bb6522a-6fa1-4494-8278-c39430101a39)
 
 
-The hash from Security Onion is B087A0D12FC2CA3CCD02BD52E52421F4F60DC09BF826337A057E05A04D114CCE , so I go ahead and create a script to compare the hashes to make sure they add up. From the scripts results they add up. 
+The hash from Security Onion is B087A0D12FC2CA3CCD02BD52E52421F4F60DC09BF826337A057E05A04D114CCE , so I went ahead and created a script to compare the hashes to make sure they add up. From the scripts results they match. 
 
 ![image](https://github.com/user-attachments/assets/8c49a27d-e2fd-4f15-a1ce-b30d0cd165be)
 
