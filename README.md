@@ -29,16 +29,49 @@ Next, I went ahead and downloaded the ISO.
 
 Next, I validated the hash that is on the site with what I have downloaded. 
 
+Here is the hash of the file path. 
+
+![image](https://github.com/user-attachments/assets/3bb6522a-6fa1-4494-8278-c39430101a39)
 
 
+The hash from Security Onion is B087A0D12FC2CA3CCD02BD52E52421F4F60DC09BF826337A057E05A04D114CCE , so I go ahead and create a script to compare the hashes to make sure they add up. From the scripts results they add up. 
+
+![image](https://github.com/user-attachments/assets/8c49a27d-e2fd-4f15-a1ce-b30d0cd165be)
 
 
+Now that the hashes have been verified, I know this ISO's integrity has not been tampered with. I will continue with the installation now by turning this ISO into a bootable drive using Balena Etcher. 
+
+From here, you just select the ISO and then put it on a USB and flash it. However, once after this step it would be hard to take screenshots, so I will put this on a VM to continue the screenshots, but the process would be the same when in front of the computer. 
+
+I just pre-loaded all the requirements needed into VMware and now am ready to go. Please watch the reference video if you need to see the small steps taken. 
+
+![image](https://github.com/user-attachments/assets/fe39f94b-4795-4add-99bb-ae5e64b8fc98)
 
 
+When you start, you will be prompted with this UI 
+
+![image](https://github.com/user-attachments/assets/8d82e2b0-a04d-4199-b01b-a7eb39bd5ad2)
+
+Everything is getting set up and will look like this, so just give it some time. Get some water and hydrate! 
+
+![image](https://github.com/user-attachments/assets/fe95d575-024e-446f-8f14-b407df6b1101)
+
+Once everything is complete, you should see this screen now. We will go ahead and type in yes to proceed. 
+
+![image](https://github.com/user-attachments/assets/ada6beba-53a6-4549-9291-c9363f35825f)
+
+You will now create an admin account to be able to access the system. Make sure you keep track of this password. Put it in your password manager like Keeper or 1Password. 
+
+![image](https://github.com/user-attachments/assets/8ca37faa-8b67-433b-9199-30f1386c030f)
+
+Once you have entered your admin account, the download will take place. This process takes a few minutes as well, so get some more water while you wait. 
+
+![image](https://github.com/user-attachments/assets/33dbd949-0523-4604-9c46-81a332a97203)
+
+Now that the packages have downloaded and installed, its time to proceed with the next steps. 
 
 
-
-Now, you do need a switch that does support many to one port mirroring (SPAN). I have the Unifi Pro 48 switch in my lab, so I will be using this. If you would like another reccoemndation, I suggest the Dell PowerConnect 7048P (https://hardwarestorm.com/dell-powerconnect-7048p-network-switch.html)
+Now, you do need a switch that does support many to one port mirroring (SPAN). I have the Unifi Pro 48 switch in my lab, so I will be using this. If you would like another recommendation, I suggest the Dell PowerConnect 7048P (https://hardwarestorm.com/dell-powerconnect-7048p-network-switch.html)
 
 Unifi only has 1-1 SPAN ports on their UI. In order to bypass this, we need to ssh into the switch and make the config on the backend to allow multiple SPAN ports. First, I use PuTTY to remote into the switch. 
 
@@ -58,10 +91,10 @@ Next, I type the command "show monitor session all"
 
 From here, all we need to do is type the command to have the switch know which ports are the source ports and which one is the TAP port. A good reference video I like to credit is https://www.youtube.com/watch?v=VwVyM_wZTps
 
-Since mine is already configured, I will not replicate this command all the way, however, I will tell you the commands to type. Before you proceed, please note that this command is temporary. If youre switch reboots for updates or whatever, the command gets erased and you have to do this all over again to config the switch. Moving on, you also need to decide which session you want to configure. It does not matter if you pick any of them since typically these will be disabled and hidden to most who dont know how to get here. So for this example, well just stick with session 1. Also you have to pick which port you want to have TAP enabled on so make sure you have Security Onion TAP port connected to the right port. I will use port 42, however, you can use which ever port you want. So type in the CLI "monitor session 1 destination interface 0/42". This will have the UNIFI switch make that specific port the TAP port. Next, we need to target the source ports. Type in "monitor session 1 source interface 0/2" Again, this is just an example port. You would just need to replicate that command per port you want to monirot. Lastly, just type the command "monitor session 1 mode" to enable the session and that is it. Security onion will now start moniroting the ports specified. 
+Since mine is already configured, I will not replicate this command all the way, however, I will tell you the commands to type. Before you proceed, please note that this command is temporary. If your switch reboots for updates or whatever, the command gets erased and you have to do this all over again to config the switch. Moving on, you also need to decide which session you want to configure. It does not matter if you pick any of them since typically these will be disabled and hidden to most who don’t know how to get here. So for this example, well just stick with session 1. Also you have to pick which port you want to have TAP enabled on so make sure you have Security Onion TAP port connected to the right port. I will use port 42, however, you can use whichever port you want. So type in the CLI "monitor session 1 destination interface 0/42". This will have the UNIFI switch make that specific port the TAP port. Next, we need to target the source ports. Type in "monitor session 1 source interface 0/2" Again, this is just an example port. You just need to replicate that command per port you want to monitor. Lastly, just type the command "monitor session 1 mode" to enable the session and that is it. Security onion will now start monitoring the ports specified. 
 
 
-Now that the switch has been configued, lets head back over to security onion. 
+Now that the switch has been configured, lets head back over to security onion. 
 
 It looks like I am getting alerts now from all of my internal network. 
 
@@ -72,25 +105,6 @@ It looks like I am getting alerts now from all of my internal network.
 Here is a view of my switch. I have all ports on the bottom row activated with my different network devices. Port 42 is the TAP port and the others are the source ports that I point to the TAP port. 
 
 ![image](https://github.com/user-attachments/assets/c17f596d-02fc-4d53-95c2-7ebe7383c34d)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
