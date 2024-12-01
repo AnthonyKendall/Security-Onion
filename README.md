@@ -27,6 +27,8 @@ Next, I went ahead and downloaded the ISO.
 ![image](https://github.com/user-attachments/assets/0daf027a-b9ed-400d-9989-c57482c8c680)
 
 
+Next, I validated the hash that is on the site with what I have downloaded. 
+
 
 
 
