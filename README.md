@@ -84,7 +84,7 @@ Next, I type "en" then "config"
 
 ![image](https://github.com/user-attachments/assets/f86ff2ae-d682-4c57-8444-b6fcad6a5cbf)
 
-Next, I type the command "show monitor session all" 
+Next, I type the command "show monitor session all". Mine is already setup, but yours would be blank like the rest of the sessions.
 
 ![image](https://github.com/user-attachments/assets/3989d025-e05b-45ef-a275-fa0d5c0d4e39)
 
