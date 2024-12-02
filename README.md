@@ -68,7 +68,7 @@ Once you have entered your admin account, the download will take place. This pro
 
 ![image](https://github.com/user-attachments/assets/33dbd949-0523-4604-9c46-81a332a97203)
 
-While we wait for this to download, we can multi task and work on the next step by making sure our network switch is properly configured to send traffic to the TAP port. 
+While we wait for this to download, we can multitask and work on the next step by making sure our network switch is properly configured to send traffic to the TAP port. 
 
 Now, you do need a switch that does support many to one port mirroring (SPAN). I have the Unifi Pro 48 switch in my lab, so I will be using this. If you would like another recommendation, I suggest the Dell PowerConnect 7048P (https://hardwarestorm.com/dell-powerconnect-7048p-network-switch.html)
 
@@ -119,11 +119,11 @@ I type in AGREE to proceed.
 
 ![image](https://github.com/user-attachments/assets/0ee5a39a-febc-44dd-b255-0dcf1319af24)
 
-Then I select Standard. Note that you could have this in an AirGap setup if you dont want Security Onion to communicate with the internet. 
+Then I select Standard. Note that you could have this in an Airgap setup if you don’t want Security Onion to communicate with the internet. 
 
 ![image](https://github.com/user-attachments/assets/99cc934b-2e50-4791-b175-b025ded0a20b)
 
-Then you can rename the server to what ever you would like to call it, however, for this example we will just keep the default name. 
+Then you can rename the server what ever you would like to call it, however, for this example we will just keep the default name. 
 
 ![image](https://github.com/user-attachments/assets/62b67f0f-5dd1-4508-a2e9-e3dbb015b5e5)
 
@@ -190,13 +190,13 @@ Now, going right to the alerts, it looks like we already have one alert that tri
 
 ![image](https://github.com/user-attachments/assets/7300f98f-1478-417a-9cfe-10b73c94c12e)
 
-Lets test the TAP NIC to make sure it can recieve more alerts. Simply navigate to "Grid" then scroll down and click on the 2nd icon 
+Lets test the TAP NIC to make sure it can receive more alerts. Simply navigate to "Grid" then scroll down and click on the 2nd icon 
 
 ![image](https://github.com/user-attachments/assets/5e2a4e82-9f80-43a8-8884-3da8f3fcc094)
 
 Now give it about 5 minutes to actually send the alerts. 
 
-After waiting, we navigate to the Alerts section and click on refreash and you can see we can recieve more traffic and different alerts which is excatly what we want. 
+After waiting, we navigate to the Alerts section and click on refresh and you can see we can receive more traffic and different alerts which is exactly what we want. 
 
 ![image](https://github.com/user-attachments/assets/4b13926e-bc5d-41b8-9f5c-e403f693369a)
 
@@ -214,11 +214,11 @@ Now something I think is cool that Security onion does is tell you more informat
 
 ![image](https://github.com/user-attachments/assets/a11729f6-2f7c-419c-b083-bd06616c7fff)
 
-If you think this alert is just completley useless, just simply turn the rule off entirely then like I just did. 
+If you think this alert is just completely useless, just simply turn the rule off entirely then like I just did. 
 
 ![image](https://github.com/user-attachments/assets/d8d16e18-af0b-427a-bc1c-5a0354349d06)
 
-Now, lets say you wanted this rule enabled, but just wanted a certian group or individual devices from alerting due to the activity being for legit purposes. 
+Now, lets say you wanted this rule enabled, but just wanted a certain group or individual devices from alerting due to the activity being for legit purposes. 
 
 Well lets navigate to the tuning tab
 
@@ -236,17 +236,17 @@ Once the information has been plugged in, click on "create" at the bottom.
 
 ![image](https://github.com/user-attachments/assets/a166df45-cced-43d9-8675-3bb56d4e6e42)
 
-After a few secounds you will see the rule has been applied 
+After a few seconds you will see the rule has been applied 
 
 ![image](https://github.com/user-attachments/assets/b51a5228-c721-467f-bf96-7fb70eaa535e)
 
-To get the alerts out of your dashboard, first we need to acknowledge the alert and esculate it to a case. 
+To get the alerts out of your dashboard, first we need to acknowledge the alert and escalate it to a case. 
 
 Click on the Bell icon to acknowledge the case. That way it goes to you and saves your team from having to look at it and waste time. 
 
 ![image](https://github.com/user-attachments/assets/d719adaf-352b-4b65-9c76-88ee2a7277cb)
 
-After you click on the bell icon, navigate to the top of the page and click the drop down arrow 
+After you click on the bell icon, navigate to the top of the page and click the drop-down arrow 
 
 ![image](https://github.com/user-attachments/assets/64fd3a33-275e-4b25-a6f3-87d386cc5f0f)
 
@@ -254,7 +254,7 @@ From here, select the acknowledged slider
 
 ![image](https://github.com/user-attachments/assets/ee58cae0-6fb7-4041-831e-c383ab919ff6)
 
-After you select that, all your acknowledgements will show up. Select the one you want to turn into a case by selecting the triange icon. 
+After you select that, all your acknowledgements will show up. Select the one you want to turn into a case by selecting the triangle icon. 
 
 ![image](https://github.com/user-attachments/assets/ecef9b7a-1e9c-4d2a-85db-7f12b21644da)
 
@@ -288,51 +288,6 @@ Simply go to the "Status" section under Summary over on the right side and set t
 After you close the case, it will not be out of your dashboard and successfully reviewed by you. 
 
 There is much more you can do in this server such as add more IP's to the firewall, add more users with different roles, add elastic agents to log for Windows event logs and so much more. Play around with it and discover the amazing things this tool can do. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Lets test to make sure that the TAP NIC card is working and receiving alerts. A good way to do this is to navigate to Security Onion and click on Test alerts. Security Onion will send Test alerts to your dashboard. If you recieve them, this lets you know that the TAP port is working correctly. 
-
-![image](https://github.com/user-attachments/assets/2faa949d-a1be-4896-9f60-9ff4ea842f51)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
