@@ -98,9 +98,85 @@ Here is a view of my switch. I have all ports on the bottom row activated with m
 
 Now that the switch has been configured, lets head back over to security onion. 
 
+It looks like the download is done and I need to reboot, so let me go ahead and do that. 
+
+![image](https://github.com/user-attachments/assets/b4891598-eeeb-4f8b-b67d-6764d0b2218a)
+
+The server has rebooted and now its time to login and configure the server. 
+
+![image](https://github.com/user-attachments/assets/04ffe3a5-fc7f-4210-b235-592f2e1cbb30)
+
+I click on Yes to proceed to the next step and click on Install 
+
+![image](https://github.com/user-attachments/assets/11ee9cc1-9574-4fc2-a57a-046653bb07ee)
 
 
-It looks like I am getting alerts now from all of my internal network. 
+Next, we are going to select the eval node as this is just an example setup, however, for my home lab, I have the standalone version installed. 
+
+![image](https://github.com/user-attachments/assets/effc9d6e-2754-4c2a-a825-d3786b33024a)
+
+I type in AGREE to proceed. 
+
+![image](https://github.com/user-attachments/assets/0ee5a39a-febc-44dd-b255-0dcf1319af24)
+
+Then I select Standard. Note that you could have this in an AirGap setup if you dont want Security Onion to communicate with the internet. 
+
+![image](https://github.com/user-attachments/assets/99cc934b-2e50-4791-b175-b025ded0a20b)
+
+Then you can rename the server to what ever you would like to call it, however, for this example we will just keep the default name. 
+
+![image](https://github.com/user-attachments/assets/62b67f0f-5dd1-4508-a2e9-e3dbb015b5e5)
+
+Next, we need to choose the NIC card that will be the one to access the website. We will leave this as default as well. 
+
+![image](https://github.com/user-attachments/assets/5f26d1a4-0626-403e-a07d-dd0b60490078)
+
+You can pick DHCP or Static for the IP. In this example, we will use DHCP. 
+
+![image](https://github.com/user-attachments/assets/3b89b1a3-ac13-4514-9add-1cbbff1a380d)
+
+Next, we select the monitoring NIC. There is only going to be one option, so just select the remaining NIC. 
+
+![image](https://github.com/user-attachments/assets/d2146594-b1ce-41f0-b7eb-f5af71e5cb2e)
+
+Next, we need to create a email to login to the web interface. This can be a fake email, does not need to be real at all. So we will just use a simple one.
+
+![image](https://github.com/user-attachments/assets/bdaa281b-389e-44e3-b586-17be57ce07c3)
+
+Then we need to enter a password. 
+
+![image](https://github.com/user-attachments/assets/e7df914b-c85b-4a32-989b-627d3ac9fe5b)
+
+Next, you will be prompted to select how you would like to access the interface. I will select the IP option 
+
+![image](https://github.com/user-attachments/assets/bd349ad2-4c83-40a5-b790-ae639d543e42)
+
+Select yes for this step.
+
+![image](https://github.com/user-attachments/assets/68877911-bb23-4fbd-afe8-eba965d9bb6f)
+
+Now we need to enter the subnet into the firewall so we can access it. If you do this step incorrectly, you will not be able to connect to the security onion server. 
+
+![image](https://github.com/user-attachments/assets/63af9d5a-8d48-4b55-8ba1-7410915bbdad)
+
+I select No for this step, but feel free to select yes if you would like. 
+
+![image](https://github.com/user-attachments/assets/837cb692-4119-4e0b-b457-a665ab3fd3b9)
+
+Final check that Security Onion gives you to review all the edits you added. If everything looks good, then go ahead and select yes. 
+
+![image](https://github.com/user-attachments/assets/0d2a4e45-9ba2-47f9-966f-1518465f3f1d)
+
+Now security onion will apply those changes and update the server with the config. 
+
+![image](https://github.com/user-attachments/assets/c92b1116-ed16-4a5a-bfa3-c20f21331e2d)
+
+
+
+
+
+
+Lets test to make sure that the TAP NIC card is working and receiving alerts. A good way to do this is to navigate to Security Onion and click on Test alerts. Security Onion will send Test alerts to your dashboard. If you recieve them, this lets you know that the TAP port is working correctly. 
 
 ![image](https://github.com/user-attachments/assets/2faa949d-a1be-4896-9f60-9ff4ea842f51)
 
