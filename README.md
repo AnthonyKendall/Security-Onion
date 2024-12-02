@@ -167,9 +167,143 @@ Final check that Security Onion gives you to review all the edits you added. If 
 
 ![image](https://github.com/user-attachments/assets/0d2a4e45-9ba2-47f9-966f-1518465f3f1d)
 
-Now security onion will apply those changes and update the server with the config. 
+Now security onion will apply those changes and update the server with the config. This will take a couple of minutes, so grab a bite to eat if you want. 
 
 ![image](https://github.com/user-attachments/assets/c92b1116-ed16-4a5a-bfa3-c20f21331e2d)
+
+
+Okay the setting have been configured and this is the screen you should now see. 
+
+![image](https://github.com/user-attachments/assets/6b57ada8-334e-4fc1-8535-af0f3530950a)
+
+Lets navigate to the web interface with the listed IP shown. 
+
+Here you can see, we can successfully reach the web interface of Security Onion. 
+
+![image](https://github.com/user-attachments/assets/cc1bb947-ed69-4665-8973-c87ecf1db1e8)
+
+We have logged in and are now met with the overview page of Security Onion. 
+
+![image](https://github.com/user-attachments/assets/fbc3f45a-42da-4d03-8330-fdeba0778867)
+
+Now, going right to the alerts, it looks like we already have one alert that triggered from our host machine. 
+
+![image](https://github.com/user-attachments/assets/7300f98f-1478-417a-9cfe-10b73c94c12e)
+
+Lets test the TAP NIC to make sure it can recieve more alerts. Simply navigate to "Grid" then scroll down and click on the 2nd icon 
+
+![image](https://github.com/user-attachments/assets/5e2a4e82-9f80-43a8-8884-3da8f3fcc094)
+
+Now give it about 5 minutes to actually send the alerts. 
+
+After waiting, we navigate to the Alerts section and click on refreash and you can see we can recieve more traffic and different alerts which is excatly what we want. 
+
+![image](https://github.com/user-attachments/assets/4b13926e-bc5d-41b8-9f5c-e403f693369a)
+
+![image](https://github.com/user-attachments/assets/df3c9d0a-fca0-4d38-b0ae-bcde59e5d7ee)
+
+Now from here, the rest of this setup is just waiting for alerts and fine tuning them to mitigate as many false positives as possible. 
+
+For example, lets say we want to exclude my host VM from triggering this "ET INFO Spotify P2P Client" alert. We need to click on the alert and select "Tune Detection". 
+
+![image](https://github.com/user-attachments/assets/99876a4a-8c87-4731-a119-4306a19323a8)
+
+Now something I think is cool that Security onion does is tell you more information about the alert and what it really means. You just simply navigate to the overview tab to see more information on the alert. 
+
+![image](https://github.com/user-attachments/assets/47869299-2400-455e-9df2-f16839629bc1)
+
+![image](https://github.com/user-attachments/assets/a11729f6-2f7c-419c-b083-bd06616c7fff)
+
+If you think this alert is just completley useless, just simply turn the rule off entirely then like I just did. 
+
+![image](https://github.com/user-attachments/assets/d8d16e18-af0b-427a-bc1c-5a0354349d06)
+
+Now, lets say you wanted this rule enabled, but just wanted a certian group or individual devices from alerting due to the activity being for legit purposes. 
+
+Well lets navigate to the tuning tab
+
+![image](https://github.com/user-attachments/assets/da1d230b-21de-4652-9f02-f7ba68fb62aa)
+
+Click the plus icon 
+
+![image](https://github.com/user-attachments/assets/e14c157c-dcdd-4363-8c31-42eb5d3e6bb5)
+
+Next we want to do Suppress, by src IP then the actual IP itself. 
+
+![image](https://github.com/user-attachments/assets/f4e29dbb-b28d-41de-877c-8ae55419ee4e)
+
+Once the information has been plugged in, click on "create" at the bottom. 
+
+![image](https://github.com/user-attachments/assets/a166df45-cced-43d9-8675-3bb56d4e6e42)
+
+After a few secounds you will see the rule has been applied 
+
+![image](https://github.com/user-attachments/assets/b51a5228-c721-467f-bf96-7fb70eaa535e)
+
+To get the alerts out of your dashboard, first we need to acknowledge the alert and esculate it to a case. 
+
+Click on the Bell icon to acknowledge the case. That way it goes to you and saves your team from having to look at it and waste time. 
+
+![image](https://github.com/user-attachments/assets/d719adaf-352b-4b65-9c76-88ee2a7277cb)
+
+After you click on the bell icon, navigate to the top of the page and click the drop down arrow 
+
+![image](https://github.com/user-attachments/assets/64fd3a33-275e-4b25-a6f3-87d386cc5f0f)
+
+From here, select the acknowledged slider 
+
+![image](https://github.com/user-attachments/assets/ee58cae0-6fb7-4041-831e-c383ab919ff6)
+
+After you select that, all your acknowledgements will show up. Select the one you want to turn into a case by selecting the triange icon. 
+
+![image](https://github.com/user-attachments/assets/ecef9b7a-1e9c-4d2a-85db-7f12b21644da)
+
+Select "Escalate to new case" 
+
+![image](https://github.com/user-attachments/assets/2247c36d-ea5d-4e86-8ed3-4632ddfb3f2d)
+
+Once you escalate the case, navigate to the cases tab on the left. 
+
+![image](https://github.com/user-attachments/assets/9a87c305-2ffc-4558-90e2-45645b7cbd6b)
+
+Once you are here, click on the binoculars icon 
+
+![image](https://github.com/user-attachments/assets/ddf3ae4f-4ee3-4589-a22b-53d0a36a4774)
+
+
+This is where you are able to add attachments, info from another case and etc.. 
+
+![image](https://github.com/user-attachments/assets/a76452d7-43d0-46b1-a05f-81ad9a2c1848)
+
+From here, we just excluded our host machine from triggering this alert again, so we will just add a quick note. Also note to assign yourself the case. 
+
+![image](https://github.com/user-attachments/assets/e2bd1520-c744-40aa-a8ca-5509153039ad)
+
+Now that we added a note to the case and assigned it to us, lets close it out. 
+
+Simply go to the "Status" section under Summary over on the right side and set the case to close. 
+
+![image](https://github.com/user-attachments/assets/ddc9ae0c-31a8-4439-a951-b969640d7361)
+
+After you close the case, it will not be out of your dashboard and successfully reviewed by you. 
+
+There is much more you can do in this server such as add more IP's to the firewall, add more users with different roles, add elastic agents to log for Windows event logs and so much more. Play around with it and discover the amazing things this tool can do. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
